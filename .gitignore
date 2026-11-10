@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.py[cod]
+.agents/
+skills-lock.json
+tech/
+database.db
+Imagens/Mensalidade dda faculdade.pdf

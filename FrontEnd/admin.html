@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Painel privado de gerenciamento de produtos da Cyber Tech."
+    />
+    <title>Catálogo | Cyber Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+    <script src="admin.js" defer></script>
+  </head>
+  <body class="manager-body">
+    <main id="loginView" class="login-layout">
+      <a class="login-brand" href="/">
+        <span class="manager-brand-mark">CT</span>
+        <span>CYBER<span class="brand-light">TECH</span></span>
+      </a>
+
+      <section class="login-intro" aria-labelledby="loginTitle">
+        <span class="utility-label">CONTROLE PRIVADO / 01</span>
+        <h1 id="loginTitle">O seu catálogo. Do seu jeito.</h1>
+        <p>Entre para atualizar os produtos e os links que aparecem na loja.</p>
+        <a href="/" class="back-to-store">← Voltar para a loja</a>
+      </section>
+
+      <form class="login-form" id="loginForm">
+        <div>
+          <span class="utility-label">ACESSO RESTRITO</span>
+          <h2>Área administrativa</h2>
+        </div>
+        <label for="email">E-mail</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder="voce@exemplo.com"
+          required
+        />
+        <label for="password">Senha</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        />
+        <p class="form-message" id="loginMessage" aria-live="polite"></p>
+        <button class="manager-button manager-button-primary" type="submit">
+          Entrar no catálogo <span aria-hidden="true">→</span>
+        </button>
+      </form>
+    </main>
+
+    <section id="dashboard" class="dashboard" hidden>
+      <aside class="manager-rail">
+        <a class="rail-brand" href="/" aria-label="Cyber Tech — página inicial">
+          <span class="manager-brand-mark">CT</span>
+        </a>
+        <span class="rail-caption">PAINEL</span>
+        <span class="rail-current" aria-label="Catálogo de produtos">▦</span>
+        <a class="rail-home" href="/" aria-label="Abrir a loja">↗</a>
+      </aside>
+
+      <div class="dashboard-main">
+        <header class="dashboard-topbar">
+          <a class="dashboard-wordmark" href="/">CYBER<span>TECH</span></a>
+          <div class="topbar-actions">
+            <a class="store-link" href="/">Ver loja <span aria-hidden="true">↗</span></a>
+            <button class="text-button" id="logoutButton" type="button">
+              Sair
+            </button>
+          </div>
+        </header>
+
+        <div class="manager-content">
+          <div class="dashboard-heading">
+            <div>
+              <span class="utility-label">SUA VITRINE / PRODUTOS</span>
+              <h1>Catálogo</h1>
+              <p>Organize os produtos e mantenha seus links de oferta em dia.</p>
+            </div>
+            <button
+              class="manager-button manager-button-primary"
+              id="newProductButton"
+              type="button"
+            >
+              <span aria-hidden="true">＋</span> Adicionar produto
+            </button>
+          </div>
+
+          <div class="catalog-overview">
+            <span class="overview-indicator" aria-hidden="true"></span>
+            <span><strong id="productCount">0</strong> produtos na sua vitrine</span>
+            <span class="overview-note">ATUALIZADO DIRETO NA LOJA</span>
+          </div>
+
+          <div class="catalog-layout">
+            <section class="catalog-panel" aria-labelledby="catalogTitle">
+              <div class="panel-heading">
+                <div>
+                  <span class="utility-label">PUBLICADOS NA LOJA</span>
+                  <h2 id="catalogTitle">Seus produtos</h2>
+                </div>
+                <label class="search-field">
+                  <span class="visually-hidden">Buscar produto</span>
+                  <span aria-hidden="true">⌕</span>
+                  <input id="productSearch" type="search" placeholder="Buscar produto" />
+                </label>
+              </div>
+              <div id="productsList" class="products-list" aria-live="polite"></div>
+            </section>
+
+            <aside class="editor-panel" aria-labelledby="editorTitle">
+              <div class="editor-heading">
+                <span class="editor-marker" aria-hidden="true">✳</span>
+                <div>
+                  <span class="utility-label" id="editorEyebrow">NOVO ITEM</span>
+                  <h2 id="editorTitle">Adicionar produto</h2>
+                </div>
+              </div>
+
+              <form id="productForm" class="product-form">
+                <label for="productName">Nome do produto</label>
+                <input
+                  id="productName"
+                  name="name"
+                  maxlength="120"
+                  placeholder="Ex.: Fone sem fio"
+                  required
+                />
+
+                <div class="form-row">
+                  <div>
+                    <label for="productCategory">Categoria</label>
+                    <select id="productCategory" name="category" required>
+                      <option value="celulares">Celulares</option>
+                      <option value="notebooks">Notebooks</option>
+                      <option value="consoles">Consoles</option>
+                      <option value="acessorios">Acessórios</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="productTag">Etiqueta</label>
+                    <input
+                      id="productTag"
+                      name="tag"
+                      maxlength="40"
+                      placeholder="Ex.: Áudio"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <label for="productPrice">Preço</label>
+                <div class="price-input">
+                  <span>R$</span>
+                  <input
+                    id="productPrice"
+                    name="price"
+                    type="number"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="0,00"
+                    required
+                  />
+                </div>
+
+                <label for="productImage">Link da imagem</label>
+                <input
+                  id="productImage"
+                  name="image"
+                  type="text"
+                  maxlength="2048"
+                  placeholder="https://... ou /Imagens/produto.webp"
+                  required
+                />
+
+                <label for="productAffiliateUrl">Link do produto / afiliado</label>
+                <input
+                  id="productAffiliateUrl"
+                  name="affiliateUrl"
+                  type="url"
+                  maxlength="2048"
+                  placeholder="https://..."
+                  required
+                />
+
+                <label for="productDescription">Descrição <span>OPCIONAL</span></label>
+                <textarea
+                  id="productDescription"
+                  name="description"
+                  maxlength="1000"
+                  rows="3"
+                  placeholder="Uma breve descrição para a vitrine"
+                ></textarea>
+
+                <p class="form-message" id="productMessage" aria-live="polite"></p>
+                <div class="editor-actions">
+                  <button
+                    class="manager-button manager-button-quiet"
+                    id="cancelEditButton"
+                    type="button"
+                    hidden
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    class="manager-button manager-button-primary save-button"
+                    id="saveProductButton"
+                    type="submit"
+                  >
+                    Salvar produto <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </form>
+            </aside>
+          </div>
+          <p id="dashboardMessage" class="dashboard-message" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

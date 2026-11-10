@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Tech | Produtos Tech em Destaque</title>
+    <meta
+      name="description"
+      content="Cyber Tech: produtos de tecnologia, acessórios, celulares, notebooks, fones, smartwatches e muito mais. Compra rápida e segura via Mercado Livre."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark">CT</span>
+          <span>Cyber Tech</span>
+        </div>
+
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="#destaques">Destaques</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a
+            class="button button-admin"
+            href="/admin"
+            aria-label="Acessar a área administrativa com e-mail e senha"
+            title="Acessar a área administrativa"
+          >
+            <svg
+              class="admin-lock-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="4" y="10" width="16" height="11" rx="2" />
+              <path d="M8 10V7a4 4 0 1 1 8 0v3" />
+            </svg>
+            <span>Área administrativa</span>
+          </a>
+          <a class="button button-primary nav-offers-link" href="#produtos">
+            Ver ofertas
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Tech para você</span>
+            <h1>Produtos de tecnologia com estilo, potência e confiança.</h1>
+            <p>
+              A Cyber Tech reúne os melhores itens para celular, computador,
+              notebook, console, acessórios, fones, relógios digitais e muito
+              mais, com ofertas selecionadas para você aproveitar ao máximo.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#produtos">Comprar agora</a>
+              <a class="button button-secondary" href="#categorias">Explorar</a>
+            </div>
+
+            <ul class="stats" aria-label="Estatísticas da loja">
+              <li><strong>+12 mil</strong><span>produtos</span></li>
+              <li><strong>Entrega</strong><span>rápida</span></li>
+              <li><strong>Segurança</strong><span>confiável</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Produtos em destaque">
+            <div class="device-card main-device">
+              <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+                alt="Smartphone premium"
+              />
+            </div>
+            <div class="floating-card card-top">
+              <span>Oferta</span>
+              <strong>Até 30% OFF</strong>
+            </div>
+            <div class="floating-card card-bottom">
+              <span>Novidades</span>
+              <strong>Tech + estilos</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brands" id="destaques">
+        <div class="container brands-row">
+          <span>Apple</span>
+          <span>Samsung</span>
+          <span>Xiaomi</span>
+          <span>JBL</span>
+          <span>PlayStation</span>
+          <span>Logitech</span>
+        </div>
+      </section>
+
+      <section class="categories" id="categorias">
+        <div class="container section-heading">
+          <p class="eyebrow">Categorias</p>
+          <h2>Explore por área</h2>
+        </div>
+
+        <div class="container category-grid">
+          <article class="category-item">
+            <div class="icon">📱</div>
+            <h3>Celulares</h3>
+            <p>Últimos lançamentos e acessórios premium.</p>
+          </article>
+          <article class="category-item">
+            <div class="icon">💻</div>
+            <h3>Computadores</h3>
+            <p>Peças, periféricos e setups para produtividade.</p>
+          </article>
+          <article class="category-item">
+            <div class="icon">🧑‍💻</div>
+            <h3>Notebooks</h3>
+            <p>Performance para estudo, trabalho e jogos.</p>
+          </article>
+          <article class="category-item">
+            <div class="icon">🎮</div>
+            <h3>Consoles</h3>
+            <p>Experiências de gamer com tecnologia moderna.</p>
+          </article>
+          <article class="category-item">
+            <div class="icon">🎧</div>
+            <h3>Fones</h3>
+            <p>Som imersivo e conforto para o dia a dia.</p>
+          </article>
+          <article class="category-item">
+            <div class="icon">⌚</div>
+            <h3>Relógios</h3>
+            <p>Fitness, estilo e praticidade no pulso.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="products-section" id="produtos">
+        <div class="container section-heading split">
+          <div>
+            <p class="eyebrow">Produtos em destaque</p>
+            <h2>Seleção especial para você</h2>
+          </div>
+
+          <div class="product-filters" aria-label="Filtros de categoria">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="celulares">Celulares</button>
+            <button class="filter-btn" data-category="notebooks">Notebooks</button>
+            <button class="filter-btn" data-category="consoles">Consoles</button>
+            <button class="filter-btn" data-category="acessorios">Acessórios</button>
+          </div>
+        </div>
+
+        <div class="container product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="why-us" id="sobre">
+        <div class="container section-heading">
+          <p class="eyebrow">Por que escolher a Cyber Tech</p>
+          <h2>Uma experiência de compra feita para seu estilo de vida tech.</h2>
+        </div>
+
+        <div class="container benefits-grid">
+          <article>
+            <span>⚡</span>
+            <h3>Rápidez</h3>
+            <p>Produtos selecionados para entregar o que você procura sem perder tempo.</p>
+          </article>
+          <article>
+            <span>🛡️</span>
+            <h3>Confiabilidade</h3>
+            <p>Itens relevantes, bem avaliados e com foco em qualidade e segurança.</p>
+          </article>
+          <article>
+            <span>💸</span>
+            <h3>Ofertas</h3>
+            <p>Descontos e promoções para você aproveitar cada compra com inteligência.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">CT</span>
+            <span>Cyber Tech</span>
+          </div>
+          <p>Seu guia para tecnologia, estilo e inovação.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#categorias">Categorias</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="/admin">Área administrativa</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
